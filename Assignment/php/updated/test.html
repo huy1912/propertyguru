@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML xmlns:fb="http://www.facebook.com/2008/fbml">
+<HEAD>
+<!-- Updated the content type -->
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<!-- Updated the jquery reference -->
+<script type="text/javascript"  src="jquery-1.7.2.js"></script>
+<script type="text/javascript" language="javascript">
+/*
+Get the data using ajax
+*/
+//Used the document ready to load data and updated the requested path.
+$(document).ready(function() {
+	$.get(
+		"/getinfo.php/111", {},
+		function(data) {
+			$('.InfoDiv').html(data);
+		}
+	);
+});
+</script>
+</HEAD>
+<BODY>
+<H1><FONT FACE="verdana" COLOR="green">Welcome</FONT></H1>
+<CENTER><DIV CLASS="InfoDiv"></DIV></CENTER>
+</BODY>
+<DIV ID="fb-root"></DIV>
+<SCRIPT></SCRIPT>
+</HTML>
